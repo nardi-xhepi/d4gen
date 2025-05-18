@@ -1,10 +1,8 @@
 # Breast Cancer Driver Mutation Prediction using PCSA and XGBoost as a Meta-Learner
 GenoXplain is a solution for the interpretable analysis of genetic variants and their impact on cancer signaling pathways. Users can upload their genetic variant data (e.g., VCF files) or paste variants directly to receive insights into how these variations may affect cancer-related biological processes. This tool aims to bridge the gap between raw genetic data and actionable understanding for researchers and clinicians in the field of oncology.
 
-Built with Next.js, React, Tailwind CSS, and leveraging AI capabilities via AWS Bedrock, GenoXplain provides a user-friendly interface for complex bioinformatics analysis.
-
 # Objective
-In the long run, GenoXplain aims to accurately predict cancer driver mutations from genetic variant data, providing interpretable insights into their potential impact on cancer signaling pathways. This project specifically evaluates the performance of an XGBoost meta-learner model, using Physicochemical Scores of Amino acid substitutions (PCSA), for identifying these driver mutations under different gene evaluation scenarios. A key goal is to assess the model's ability to generalize to previously unseen genes.
+In the long run, GenoXplain aims to accurately predict cancer driver mutations from genetic variant data, providing interpretable insights into their potential impact on cancer signaling pathways. This project specifically evaluates the performance of an XGBoost meta-learner model, using Physicochemical Scores of Amino acid substitutions (PCSA), for identifying these driver mutations under different gene evaluation scenarios and explain the model decision.
 
 # Dataset
 - Patient Data (Source: cBioPortal)
