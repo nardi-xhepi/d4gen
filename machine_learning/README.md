@@ -2,7 +2,7 @@
 GenoXplain is a solution for the interpretable analysis of genetic variants and their impact on cancer signaling pathways. Users can upload their genetic variant data (e.g., VCF files) or paste variants directly to receive insights into how these variations may affect cancer-related biological processes. This tool aims to bridge the gap between raw genetic data and actionable understanding for researchers and clinicians in the field of oncology.
 
 # Objective
-In the long run, GenoXplain aims to accurately predict cancer driver mutations from genetic variant data, providing interpretable insights into their potential impact on cancer signaling pathways. This project specifically evaluates the performance of an XGBoost meta-learner model, using Physicochemical Scores of Amino acid substitutions (PCSA), for identifying these driver mutations under different gene evaluation scenarios and explain the model decision.
+In the long run, GenoXplain aims to accurately predict cancer driver mutations from genetic variant data, providing interpretable insights into their potential impact on cancer signaling pathways. This project specifically evaluates the performance of an XGBoost meta-learner model, using Pathogenic and Conservation Scoring Algorithms (PCSA), for identifying these driver mutations under different gene evaluation scenarios and explain the model decision.
 
 # Dataset
 - Patient Data (Source: cBioPortal)
