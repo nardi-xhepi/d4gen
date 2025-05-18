@@ -8,10 +8,9 @@ In the long run, GenoXplain aims to accurately predict cancer driver mutations f
 
 # Dataset
 - Patient Data (Source: cBioPortal)
-
 - 3D Protein Data (Source: AlphaFold Protein Structure Database)
-
 - dbNSP : Precomputed PCSAs scores (Source: MyVariant.info)
+- 299 driver genes: based on the catalog of driver genes identified by Bailey et al. (2018).
 
 # Model Training: XGBoost as a Meta-Learner
 
@@ -22,15 +21,16 @@ In the long run, GenoXplain aims to accurately predict cancer driver mutations f
 
 * **LIME (Local Interpretable Model-agnostic Explanations)**: A technique that provides explanations for individual predictions of any black-box machine learning model. It achieves this by learning a simpler, interpretable model (e.g., linear regression) locally around the specific instance being predicted, thus approximating the behavior of the complex model in that vicinity.
 
-## "Les gènes driver sont mélangés aléatoirement entre Train et Test"
+## Evaluation with Intermixed Genes in Train/Test Sets
 This evaluation scenario assesses the model's performance when known driver genes are randomly distributed between the training and testing datasets. This setup tests the model's ability to identify driver mutations within a familiar gene pool.
 
-## R&D Scope: "Performance sur des gènes inconnus: on divise en deux les 299 gènes connus; une partie est dans le Train et une partie est dans le Test"
+## R&D Scope: Assessing Generalization to Novel Genes
+
 This research and development scope evaluates the model's generalization capabilities to new, unseen genes. The 299 known driver genes are split; one subset is used exclusively for training, and the other distinct subset is used for testing. This is a more challenging scenario, reflecting a real-world application where the model might encounter genes it wasn't explicitly trained on.
 
 # Results
 
-## "Les gènes driver sont mélangés aléatoirement entre Train et Test"
+## Evaluation with Intermixed Genes in Train/Test Sets
 
 **Precision-Recall (PR) Curve:**
 ![image](media/precision_recall_curve_all_genes.png "PR Curve")
@@ -40,7 +40,7 @@ The PR curve for this scenario shows an Area Under the Curve (AUC) of **0.59**. 
 ![image](media/roc_curve_all_genes.png "PR Curve")
 The ROC curve displays an Area Under the Curve (AUC) of **0.91**. This is a strong result, indicating a high capability of the model to differentiate between positive (driver) and negative (non-driver) classes. An AUC of 0.91 means there is a 91% chance that the model will rank a randomly chosen positive instance higher than a randomly chosen negative one. The curve is significantly above the diagonal dashed line (which represents a random classifier), highlighting good performance in terms of balancing the true positive rate and false positive rate.
 
-## R&D Scope: "Performance sur des gènes inconnus: on divise en deux les 299 gènes connus; une partie est dans le Train et une partie est dans le Test"
+## R&D Scope: Assessing Generalization to Novel Genes
 
 **Precision-Recall (PR) Curve:**
 ![image](media/precision_recall_curve_gene_split_discover_genes.png "PR Curve")
